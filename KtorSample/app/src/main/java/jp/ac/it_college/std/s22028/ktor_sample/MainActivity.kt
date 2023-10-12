@@ -22,9 +22,9 @@ import kotlinx.serialization.json.Json
 private val ktorClient = HttpClient(CIO) {
     engine {
         endpoint{
-            connectTimeout = 1000
-            requestTimeout = 1000
-            socketTimeout = 1000
+            connectTimeout = 5000
+            requestTimeout = 5000
+            socketTimeout = 5000
         }
     }
     install(ContentNegotiation) {
