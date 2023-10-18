@@ -1,8 +1,10 @@
 package jp.ac.it_college.std.s22028.service_sample
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -59,8 +61,29 @@ class SoundManageService : Service() {
 
     private fun onMediaPlayerPrepared() {
         mediaPlayer?.start()
+        // 通知を送る準備
+        val notification = NotificationCompat.Builder(this, CHANNEL_ID).run {
+            setSmallIcon(android.R.drawable.ic_dialog_info)
+            setContentTitle(getString(R.string.msg_notification_title_finish))
+            setContentText(getString(R.string.msg_notification_text_finish))
+            val intent = Intent(
+                this@SoundManageService, MainActivity::class.java
+            ).apply {
+              putExtra("fromNotification", true)
+            }
+            val stopServiceIntent = PendingIntent.getActivity(
+                this@SoundManageService,
+                0,
+                intent,
+                PendingIntent.FLAG_IMMUTABLE
+            )
+            setContentIntent(stopServiceIntent)
+            setAutoCancel(true)
+        }.build()
+        startForeground(200, notification)
     }
 
+    @SuppressLint("MissingPermissoin")
     private  fun onPlaybackEnd(){
         // 通知送る準備
         val notification = NotificationCompat.Builder(this, CHANNEL_ID).run {
