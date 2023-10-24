@@ -1,0 +1,90 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="jp.ac.it_college.std.s22028.async_sample"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:5:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.9.0] /home/s22028/.gradle/caches/transforms-3/c022589c64e3e9462ab3d0712fc4e24f/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+14        android:name="jp.ac.it_college.std.s22028.async_sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.9.0] /home/s22028/.gradle/caches/transforms-3/c022589c64e3e9462ab3d0712fc4e24f/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.9.0] /home/s22028/.gradle/caches/transforms-3/c022589c64e3e9462ab3d0712fc4e24f/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="jp.ac.it_college.std.s22028.async_sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.9.0] /home/s22028/.gradle/caches/transforms-3/c022589c64e3e9462ab3d0712fc4e24f/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.9.0] /home/s22028/.gradle/caches/transforms-3/c022589c64e3e9462ab3d0712fc4e24f/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:7:5-26:19
+20        android:allowBackup="true"
+20-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:8:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.9.0] /home/s22028/.gradle/caches/transforms-3/c022589c64e3e9462ab3d0712fc4e24f/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:9:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:10:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:14:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.AsyncSample" >
+31-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:15:9-49
+32        <activity
+32-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:17:9-25:20
+33            android:name="jp.ac.it_college.std.s22028.async_sample.MainActivity"
+33-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:18:13-41
+34            android:exported="true" >
+34-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:19:13-36
+35            <intent-filter>
+35-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:20:13-24:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:21:17-69
+36-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:21:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:23:17-77
+38-->/home/s22028/AndroidStudioProjects/Android2/AsyncSample/app/src/main/AndroidManifest.xml:23:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <provider
+42-->[androidx.emoji2:emoji2:1.2.0] /home/s22028/.gradle/caches/transforms-3/a56e8d2a9625f1da01cc3bb9583fb6db/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+43            android:name="androidx.startup.InitializationProvider"
+43-->[androidx.emoji2:emoji2:1.2.0] /home/s22028/.gradle/caches/transforms-3/a56e8d2a9625f1da01cc3bb9583fb6db/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+44            android:authorities="jp.ac.it_college.std.s22028.async_sample.androidx-startup"
+44-->[androidx.emoji2:emoji2:1.2.0] /home/s22028/.gradle/caches/transforms-3/a56e8d2a9625f1da01cc3bb9583fb6db/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+45            android:exported="false" >
+45-->[androidx.emoji2:emoji2:1.2.0] /home/s22028/.gradle/caches/transforms-3/a56e8d2a9625f1da01cc3bb9583fb6db/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+46            <meta-data
+46-->[androidx.emoji2:emoji2:1.2.0] /home/s22028/.gradle/caches/transforms-3/a56e8d2a9625f1da01cc3bb9583fb6db/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+47                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+47-->[androidx.emoji2:emoji2:1.2.0] /home/s22028/.gradle/caches/transforms-3/a56e8d2a9625f1da01cc3bb9583fb6db/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+48                android:value="androidx.startup" />
+48-->[androidx.emoji2:emoji2:1.2.0] /home/s22028/.gradle/caches/transforms-3/a56e8d2a9625f1da01cc3bb9583fb6db/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+49            <meta-data
+49-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/s22028/.gradle/caches/transforms-3/df4e4d789347fb16339edd230abe6b70/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+50                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+50-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/s22028/.gradle/caches/transforms-3/df4e4d789347fb16339edd230abe6b70/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+51                android:value="androidx.startup" />
+51-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/s22028/.gradle/caches/transforms-3/df4e4d789347fb16339edd230abe6b70/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+52        </provider>
+53    </application>
+54
+55</manifest>

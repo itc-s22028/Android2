@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "jp.ac.it_college.std.s22028.async_coroutine_sample.app-mergeDebugResources-26:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/s22028/.gradle/caches/transforms-3/53f7cfcb74bd4ce78b1f3afcb1603e2d/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

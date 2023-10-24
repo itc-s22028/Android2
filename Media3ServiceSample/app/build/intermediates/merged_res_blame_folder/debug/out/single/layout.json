@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.media3servicesample.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.media3servicesample.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "jp.ac.it_college.std.s22028.media3servicesample.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "jp.ac.it_college.std.s22028.media3servicesample.app-main-36:/layout/activity_main.xml"
+    }
+]

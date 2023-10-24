@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "jp.ac.it_college.std.s22028.media3servicesample.test.app-mergeDebugAndroidTestResources-3:/values-v21/values-v21.xml",
+            "map": [
+                {
+                    "source": "/home/s22028/.gradle/caches/transforms-3/9a06a4cb64f8fab2655028fff6a63613/transformed/core-1.5.0/res/values-v21/values.xml",
+                    "from": {
+                        "startLines": "4,13",
+                        "startColumns": "0,0",
+                        "startOffsets": "180,655",
+                        "endLines": "12,21",
+                        "endColumns": "8,8",
+                        "endOffsets": "654,1127"
+                    },
+                    "to": {
+                        "startLines": "2,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,534",
+                        "endLines": "10,19",
+                        "endColumns": "8,8",
+                        "endOffsets": "529,1006"
+                    }
+                }
+            ]
+        }
+    ]
+}

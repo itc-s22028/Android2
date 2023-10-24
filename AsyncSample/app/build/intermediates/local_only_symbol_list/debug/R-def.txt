@@ -1,0 +1,24 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id guideline3
+id name
+id rvCityList
+id tvWeatherDesc
+id tvWeatherTelop
+id tvWinfoTitle
+layout activity_main
+layout row
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string tv_desc
+string tv_telop
+string tv_winfo_title
+style Base.Theme.AsyncSample
+style Theme.AsyncSample
+xml backup_rules
+xml data_extraction_rules

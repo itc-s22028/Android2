@@ -1,0 +1,10 @@
+#Thu Oct 12 10:18:32 JST 2023
+base.0=/home/s22028/AndroidStudioProjects/Android2/MediaSample/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+base.1=/home/s22028/AndroidStudioProjects/Android2/MediaSample/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+base.2=/home/s22028/AndroidStudioProjects/Android2/MediaSample/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/11/classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=11/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
