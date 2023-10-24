@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">お天気情報</string>
+    <string name="tv_desc">現在は%1$sです。\n緯度は%2$f度で経度は%3$f度です。</string>
+    <string name="tv_telop">%1$1sの天気</string>
+    <string name="tv_winfo_title">お天気詳細</string>
+    <style name="Base.Theme.AsyncSample" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.AsyncSample" parent="Base.Theme.AsyncSample"/>
+</resources>

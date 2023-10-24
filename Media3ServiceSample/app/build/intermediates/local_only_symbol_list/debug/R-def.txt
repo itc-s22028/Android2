@@ -1,0 +1,19 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id pause
+id play
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+raw haihaihai
+string app_name
+string pause
+string play
+style Base.Theme.Media3ServiceSample
+style Theme.Media3ServiceSample
+xml backup_rules
+xml data_extraction_rules

@@ -1,0 +1,3 @@
+jp.ac.it_college.std.s22028.service_sample.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

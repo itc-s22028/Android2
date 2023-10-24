@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "jp.ac.it_college.std.s22028.async_sample.app-mergeDebugResources-27:/layout/activity_main.xml",
+        "source": "jp.ac.it_college.std.s22028.async_sample.app-main-30:/layout/activity_main.xml"
+    },
+    {
+        "merged": "jp.ac.it_college.std.s22028.async_sample.app-mergeDebugResources-27:/layout/row.xml",
+        "source": "jp.ac.it_college.std.s22028.async_sample.app-main-30:/layout/row.xml"
+    }
+]

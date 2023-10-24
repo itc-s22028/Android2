@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btBack
+id btForward
+id btPlay
+id swLoop
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+raw haihaihai
+raw keihou
+string app_name
+string bt_back
+string bt_forward
+string bt_play_pause
+string bt_play_play
+string sw_loop
+style Base.Theme.MediaSample
+style Theme.MediaSample
+xml backup_rules
+xml data_extraction_rules
