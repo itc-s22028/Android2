@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btMapSearch
+id btMapShowCurrent
+id divider
+id etSearchWord
+id gIlLonLat
+id tvCurrentTitle
+id tvLatitude
+id tvLatitudeTitle
+id tvLongitude
+id tvLongitudeTitle
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string bt_map_current
+string bt_map_search
+string tv_current_title
+string tv_latitude_title
+string tv_longitude_title
+style Base.Theme.ImplicitIntentSample
+style Theme.ImplicitIntentSample
+xml backup_rules
+xml data_extraction_rules
