@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/anim_fade_out.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/anim/fade_out.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/xml_backup_rules.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/anim_slide_in_right.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/anim/slide_in_right.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/anim_slide_out_right.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/anim/slide_out_right.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/anim_fade_in.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/anim/fade_in.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/layout_activity_main.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/navigation_nav_graph.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/navigation_nav_graph.xml.flat",
+        "source": "jp.ac.it_college.std.s22028.navigationsample.app-main-49:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/anim_slide_out_left.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/anim_slide_in_left.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/anim/slide_in_left.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/layout_fragment_third.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/layout/fragment_third.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/layout_fragment_second.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-merged_res-47:/layout_fragment_home.xml.flat",
+        "source": "/home/s22028/.gradle/daemon/8.0/jp.ac.it_college.std.s22028.navigationsample.app-main-49:/layout/fragment_home.xml"
+    }
+]

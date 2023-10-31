@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="a"/>
+    <string name="app_name">NavigationSample</string>
+    <string name="choice1">選択肢１</string>
+    <string name="choice2">選択肢２</string>
+    <string name="choice3">選択肢３</string>
+    <string name="choice4">選択肢４</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">次へ</string>
+    <string name="second">セカンド</string>
+    <string name="string">ホーム</string>
+    <style name="Base.Theme.NavigationSample" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.NavigationSample" parent="Base.Theme.NavigationSample"/>
+</resources>

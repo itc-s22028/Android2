@@ -1,0 +1,6 @@
+jp.ac.it_college.std.s22028.navigationsample.test.app-annotation-experimental-1.3.0-0 /home/s22028/.gradle/caches/transforms-3/4007f4a568abe9c6b21fb480dd7b9dd4/transformed/annotation-experimental-1.3.0/res
+jp.ac.it_college.std.s22028.navigationsample.test.app-core-1.5.0-1 /home/s22028/.gradle/caches/transforms-3/e883aa17862a608eba31178acca5f1a3/transformed/core-1.5.0/res
+jp.ac.it_college.std.s22028.navigationsample.test.app-androidTest-2 /home/s22028/AndroidStudioProjects/Android2/NavigationSample/app/build/generated/res/resValues/androidTest/debug
+jp.ac.it_college.std.s22028.navigationsample.test.app-mergeDebugAndroidTestResources-3 /home/s22028/AndroidStudioProjects/Android2/NavigationSample/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+jp.ac.it_college.std.s22028.navigationsample.test.app-mergeDebugAndroidTestResources-4 /home/s22028/AndroidStudioProjects/Android2/NavigationSample/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+jp.ac.it_college.std.s22028.navigationsample.test.app-merged_res-5 /home/s22028/AndroidStudioProjects/Android2/NavigationSample/app/build/intermediates/merged_res/debugAndroidTest
