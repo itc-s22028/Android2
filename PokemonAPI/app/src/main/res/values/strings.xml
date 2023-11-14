@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ポケモン\nシルエット\nクイズ</string>
+    <string name="generation">第%1%d世代</string>
 </resources>
