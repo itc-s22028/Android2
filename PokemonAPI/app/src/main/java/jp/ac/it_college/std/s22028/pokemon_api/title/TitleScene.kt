@@ -1,8 +1,8 @@
 package jp.ac.it_college.std.s22028.pokemon_api.title
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -18,10 +18,11 @@ import jp.ac.it_college.std.s22028.pokemon_api.R
 import jp.ac.it_college.std.s22028.pokemon_api.ui.theme.PokemonAPITheme
 
 @Composable
-fun TitleScene(modifier: Modifier = Modifier) {
+fun TitleScene(modifier: Modifier = Modifier, onTitleClick: () -> Unit = {}) {
     Surface(modifier) {
         Column(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxSize()
+                .clickable {  },
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(

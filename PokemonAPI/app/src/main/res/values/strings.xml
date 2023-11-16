@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ポケモン\nシルエット\nクイズ</string>
-    <string name="generation">第%1%d世代</string>
+    <string name="generation">第%1$d世代</string>
+    <string name="score">スコア</string>
+    <string name="point">%1$d/10</string>
+    <string name="please_select_generation">ポケモンの世代を選んでください</string>
 </resources>
