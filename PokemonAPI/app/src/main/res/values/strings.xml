@@ -4,4 +4,7 @@
     <string name="score">スコア</string>
     <string name="point">%1$d/10</string>
     <string name="please_select_generation">ポケモンの世代を選んでください</string>
+    <string name="who">だーれだ？</string>
+    <string name="to_generation">世代選択へ</string>
+    <string name="to_title">タイトルへ</string>
 </resources>

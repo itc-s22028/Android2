@@ -1,8 +1,10 @@
 package jp.ac.it_college.std.s22028.pokemon_api.quiz
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -16,8 +18,9 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,26 +28,41 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import jp.ac.it_college.std.s22028.pokemon_api.R
 import jp.ac.it_college.std.s22028.pokemon_api.model.PokeQuiz
 import jp.ac.it_college.std.s22028.pokemon_api.ui.theme.PokemonAPITheme
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
+/**
+ * クイズのメインとなるやつ
+ */
 @Composable
 fun QuizScene(
     quiz: PokeQuiz,
     modifier: Modifier = Modifier,
+    onFinished: (Boolean) -> Unit = {},
 ) {
-    var state by remember { mutableStateOf(0) }
+    var state by remember { mutableIntStateOf(0) }
+    val scope = rememberCoroutineScope()
+
     Surface(modifier) {
         Column(
             modifier = Modifier.fillMaxWidth()
         ) {
-            PokeImage(quiz.imageUrl, state == 0)
-            PokeNameList(quiz.choices) {
+            PokeImage(quiz.imageUrl, state)
+            PokeNameList(quiz.choices, state == 0) {
                 // 正誤チェック
                 state = if (it == quiz.correct) 1 else -1
+                // 待機と終了
+                scope.launch {
+                    delay(3000)
+                    onFinished(state > 0)
+                }
             }
         }
     }
@@ -55,12 +73,13 @@ fun QuizScene(
  * [isSilhouette] が ture だとシルエット表示
  */
 @Composable
-fun PokeImage(imageUrl: String, isSilhouette: Boolean = true) {
-    Column(
+fun PokeImage(imageUrl: String, state: Int = 0) {
+    Box(
+        contentAlignment = Alignment.Center,
         modifier = Modifier
             .fillMaxWidth()
+            .fillMaxHeight(0.5f)
             .padding(vertical = 8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Box(
             modifier = Modifier
@@ -73,10 +92,29 @@ fun PokeImage(imageUrl: String, isSilhouette: Boolean = true) {
                 contentDescription = "PokeImage",
                 // カラーフィルターでシルエット表示みたいなことができる。
                 // 画像加工の詳細は各自で勉強してください
-                colorFilter = if (isSilhouette) ColorFilter.tint(
+                colorFilter = if (state == 0) ColorFilter.tint(
                     Color.Black,
                     BlendMode.SrcIn
                 ) else null,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+
+        // stateがプラスならマルを出す
+        if (state > 0) {
+            Image(
+                painter = painterResource(id = R.drawable.maru),
+                contentDescription = "",
+                alpha = 0.25f,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+        // stateがマイナスならバツを出す
+        if (state < 0) {
+            Image(
+                painter = painterResource(id = R.drawable.batu),
+                contentDescription = "",
+                alpha = 0.25f,
                 modifier = Modifier.fillMaxSize()
             )
         }
@@ -108,9 +146,10 @@ fun PokeName(name: String, enabled: Boolean, onClick: (String) -> Unit = {}) {
 }
 
 @Composable
-fun PokeNameList(items: List<String>,
-                 enabled: Boolean = true,
-                 onSelected: (String) -> Unit = {}
+fun PokeNameList(
+    items: List<String>,
+    enabled: Boolean = true,
+    onSelected: (String) -> Unit = {},
 ) {
     LazyColumn() {
         items(items) {

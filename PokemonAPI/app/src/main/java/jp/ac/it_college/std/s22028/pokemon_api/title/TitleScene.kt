@@ -22,7 +22,7 @@ fun TitleScene(modifier: Modifier = Modifier, onTitleClick: () -> Unit = {}) {
     Surface(modifier) {
         Column(
             modifier = Modifier.fillMaxSize()
-                .clickable {  },
+                .clickable(onClick = onTitleClick),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
