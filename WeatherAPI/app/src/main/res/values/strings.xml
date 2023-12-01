@@ -1,6 +1,70 @@
 <resources>
     <string name="app_name">お天気情報</string>
+    <string name="tv_telop">%1$1sの天気</string>
+    <string name="tv_weather_main">天気は%1$sです。</string>
+    <!--    <string name="tv_weather_icon">天気アイコン</string>-->
+    <string name="tv_temp">気温は%1$sです。</string>
+    <string name="tv_feels_like">体感気温は%1$sです。</string>
+    <string name="tv_grnd_level">気圧は%1$sです。</string>
+    <string name="tv_humidity">湿度は%1$sです。</string>
+    <string name="tv_wind_speed">風速は%1$sです。</string>
+    <string name="tv_wind_deg">風向は%1$sです。</string>
+    <string name="tv_wind_gust">瞬間風速は%1$sです。</string>
+    <string name="tv_pop">直近3時間の積雪量は%1$sです。</string>
+    <string name="tv_d">予測時刻は%1$sです。</string>
+
+    <string name="tv_select"> 都市名を選択したください。</string>
     <string name="tv_winfo_title">お天気詳細</string>
-    <string name="tv_telop">%1$sの天気</string>
-    <string name="tv_desc">現在は%1$sです。\n緯度は%2$f度で経度は%3$f度です。</string>
+    <string name="tv_desc">現在は%1$sです。</string>
+    <string name="tv_title">3時間ごとの天気</string>
+
+    <string-array name="spinner_items">
+        <item>北海道(札幌)</item>
+        <item>青森</item>
+        <item>岩手(盛岡)</item>
+        <item>宮城(仙台)</item>
+        <item>秋田</item>
+        <item>山形</item>
+        <item>福島</item>
+        <item>茨城(水戸)</item>
+        <item>栃木(宇都宮)</item>
+        <item>群馬(前橋)</item>
+        <item>埼玉(さいたま)</item>
+        <item>千葉</item>
+        <item>東京</item>
+        <item>神奈川(横浜)</item>
+        <item>新潟</item>
+        <item>富山</item>
+        <item>石川(金沢)</item>
+        <item>福井</item>
+        <item>山梨(甲府)</item>
+        <item>長野</item>
+        <item>岐阜</item>
+        <item>静岡</item>
+        <item>愛知(名古屋)</item>
+        <item>三重(津)</item>
+        <item>滋賀(大津)</item>
+        <item>京都</item>
+        <item>大阪</item>
+        <item>兵庫</item>
+        <item>奈良</item>
+        <item>和歌山</item>
+        <item>鳥取</item>
+        <item>島根(松江)</item>
+        <item>岡山</item>
+        <item>広島</item>
+        <item>山口</item>
+        <item>徳島</item>
+        <item>香川(高松)</item>
+        <item>愛媛(松山)</item>
+        <item>高知</item>
+        <item>福岡</item>
+        <item>佐賀</item>
+        <item>長崎</item>
+        <item>熊本</item>
+        <item>大分</item>
+        <item>宮崎</item>
+        <item>鹿児島</item>
+        <item>沖縄(那覇)</item>
+    </string-array>
 </resources>

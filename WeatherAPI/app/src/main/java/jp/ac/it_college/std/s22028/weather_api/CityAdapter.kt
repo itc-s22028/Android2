@@ -1,28 +1,39 @@
-package jp.ac.it_college.std.s22028.weather_api
-
+import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.ArrayAdapter
+import jp.ac.it_college.std.s22028.weather_api.City
 import jp.ac.it_college.std.s22028.weather_api.databinding.RowBinding
 
-class CityAdapter(val callback: (City) -> Unit) : RecyclerView.Adapter<CityAdapter.ViewHolder>() {
-    class ViewHolder(val binding: RowBinding) : RecyclerView.ViewHolder(binding.root)
+class CityAdapter(
+    context: Context,
+    private val callback: (City) -> Unit,
+    private val cities: List<City>
+) : ArrayAdapter<City>(context, 0, cities) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-        ViewHolder(
-            RowBinding.inflate(
-                LayoutInflater.from(parent.context), parent, false
-            )
-        )
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        return createView(position, convertView, parent)
+    }
 
-    override fun getItemCount(): Int = cityList.size
+    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+        return createView(position, convertView, parent)
+    }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.name.apply {
-            text = cityList[position].name
-            setOnClickListener {
-                callback(cityList[position])
+    private fun createView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val binding: RowBinding =
+            if (convertView == null) {
+                RowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            } else {
+                RowBinding.bind(convertView)
             }
+
+        val city = getItem(position)
+        binding.name.text = city?.name
+        binding.name.setOnClickListener {
+            city?.let { callback(it) }
         }
+
+        return binding.root
     }
 }
