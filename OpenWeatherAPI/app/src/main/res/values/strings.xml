@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">OpenWeatherAPI</string>
+    <string name="app_name">お天気情報</string>
+    <string name="tv_telop">%1$1sの天気</string>
+    <string name="tv_weather_main">天気は%1$sです。</string>
+    <!--    <string name="tv_weather_icon">天気アイコン</string>-->
+    <string name="tv_temp">気温は%1#sです。</string>
+    <string name="tv_feels_like">体感気温は%1$sです。</string>
+    <string name="tv_grnd_level">気圧は%1$sです。</string>
+    <string name="tv_humidity">湿度は%1$sです。</string>
+    <string name="tv_wind_speed">風速は%1$sです。</string>
+    <string name="tv_wind_deg">風向は%1$sです。</string>
+    <string name="tv_wind_gust">瞬間風速は%1$sです。</string>
+    <string name="tv_pop">直近3時間の積雪量は%1$sです。</string>
+    <string name="tv_d">予測時刻は%1$sです。</string>
+
+    <string name="tv_winfo_title">お天気詳細</string>
+    <string name="tv_desc">現在は%1$sです。</string>
+    <string name="geo_0_0_id">geo:0,0?id=</string>
+    <string name="geo_0_0_q">geo:0,0?id=</string>
 </resources>
