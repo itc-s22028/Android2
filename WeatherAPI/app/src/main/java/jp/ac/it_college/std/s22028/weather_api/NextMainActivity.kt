@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import jp.ac.it_college.std.s22028.weather_api.databinding.ActivityNextMainBinding
@@ -16,6 +17,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 
 class NextMainActivity : AppCompatActivity() {
+    var A = 0
     companion object {
         private const val DEBUG_TAG = "WeatherAPI"
         private const val WEATHER_INFO_URL =
@@ -54,8 +56,20 @@ class NextMainActivity : AppCompatActivity() {
 
             val listArray = root.getJSONArray("list")
             if (listArray.length() > 0) {
+
+                val nextButton = findViewById<Button>(R.id.nextButton)
+                nextButton.setOnClickListener {
+                    // ボタンがクリックされたときにAを増やす
+                    A += 1
+
+                    // Aが有効な範囲内にあるかどうかを確認
+                    if (A < listArray.length()) {
+                        // 更新されたAを使用してJSONオブジェクトにアクセス
+                        val firstWeatherObject = listArray.getJSONObject(A)
+                        // 必要に応じて天気オブジェクトを処理
+
                 // １日目のはじめ
-                val firstWeatherObject = listArray.getJSONObject(0)
+//                val firstWeatherObject = listArray.getJSONObject(A)
 
                 val pop = firstWeatherObject.getString("pop")
 
@@ -106,12 +120,17 @@ class NextMainActivity : AppCompatActivity() {
                     binding.POP.text = "降水確率 : ${if (mainDesc != Int.MIN_VALUE) pop else "N/A"} %"
 
                     binding.tvD.text = getString(R.string.tv_d, dtObject)
+                } else {
+                    A = 0
+                }
+                    }
                 }
             }
 
         } catch (e: JSONException) {
             Log.e(DEBUG_TAG, "Error parsing weather information", e)
         }
+
     }
 
     private class WeatherInfoAsyncTask(activity: NextMainActivity) :
