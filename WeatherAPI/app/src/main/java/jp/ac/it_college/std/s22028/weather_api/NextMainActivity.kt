@@ -1,21 +1,25 @@
 package jp.ac.it_college.std.s22028.weather_api
 
+import android.annotation.SuppressLint
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import jp.ac.it_college.std.s22028.weather_api.databinding.ActivityNextMainBinding
+import org.json.JSONException
 import org.json.JSONObject
 import java.lang.ref.WeakReference
 import java.net.HttpURLConnection
 import java.net.URL
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class NextMainActivity : AppCompatActivity() {
     companion object {
-        private const val DEBUG_TAG = "AsyncSample"
+        private const val DEBUG_TAG = "WeatherAPI"
         private const val WEATHER_INFO_URL =
-            "https://api.openweathermap.org/data/2.5/weather?lang=ja"
+            "https://api.openweathermap.org/data/2.5/forecast?lang=ja"
         private const val APP_ID = BuildConfig.API_KEY
     }
 
@@ -26,59 +30,74 @@ class NextMainActivity : AppCompatActivity() {
         binding = ActivityNextMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Intentから都市データを受け取る
         val selectedCity: City? = intent.getSerializableExtra("SELECTED_CITY") as? City
         Log.d("NextMainActivity", "Selected City: $selectedCity")
 
-        // ここでselectedCityを使用して表示や処理を行う
         selectedCity?.let {
-            // 例: TextViewに都市名とIDを表示する
             val cityNameTextView = findViewById<TextView>(R.id.tvWeatherTelop)
 
             cityNameTextView.text = it.name
 
-            // 以下、APIから天気情報を取得する処理を追加
             val weatherTask = WeatherInfoAsyncTask(this)
             weatherTask.execute(it.cityId.toString())
         }
     }
 
+    @SuppressLint("StringFormatMatches", "StringFormatInvalid")
     private fun showWeatherInfo(result: String) {
         try {
             val root = JSONObject(result)
+            // 都市名
+            val city = root.getJSONObject("city")
+            val cityName = city.getString("name")
 
-            val weatherArray = root.getJSONArray("weather")
-            val current = weatherArray.getJSONObject(0)
-            val weatherDescription = current.getString("description")
+            val listArray = root.getJSONArray("list")
+            if (listArray.length() > 0) {
+                // １日目のはじめ
+                val firstWeatherObject = listArray.getJSONObject(0)
 
-            val mainObject = root.getJSONObject("main")
-            val temperature = mainObject.getDouble("temp")
-            val feelslike = mainObject.getDouble("feels_like")
-            val weatherTemp = (temperature - 273.15).toInt()
-            val weatherFeelsLike = (feelslike - 273.15).toInt()
+                // Main{}のやつ
+                val mainObject = firstWeatherObject.getJSONObject("main")
+                val dtObject = firstWeatherObject.getString("dt_txt")
+//                val dayOnly = dtObject.split("")[0]
+                val dateOnly = dtObject.split(" ")[0] // "2023-12-02"
+                val formattedDate = runCatching {
+                    val inputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                    val outputFormat = SimpleDateFormat("yyyy年MM月dd日", Locale.getDefault())
+                    val date = inputFormat.parse(dateOnly)
+                    outputFormat.format(date!!)
+                }.getOrElse { dateOnly }
+                val timeOnly = dtObject.split(" ")[1].substring(0, 2).toInt()
 
-            val windObject = root.getJSONObject("wind")
-            val windSpeed = windObject.getDouble("speed")
+                val mainTemp = mainObject.optDouble("temp", Double.NaN)
+                val mainDesc = (mainTemp - 273.15).toInt()
+                val mainfeelsLike = mainObject.optDouble("feels_like", Double.NaN)
+                val mainFeels = (mainfeelsLike - 273.15).toInt()
+                val mainhumidity = mainObject.optInt("humidity", Int.MIN_VALUE)
+                val maingrndlevel = mainObject.optInt("grnd_level", Int.MIN_VALUE)
 
+                val weatherArray = firstWeatherObject.getJSONArray("weather")
+                if (weatherArray.length() > 0) {
+                    val current = weatherArray.getJSONObject(0)
+                    val weatherDescription = current.optString("description", "N/A")
 
-            val cityName = root.getString("name")
+                    // wind
+                    val windObject = firstWeatherObject.getJSONObject("wind")
+                    val windSpeed = windObject.optDouble("speed", Double.NaN)
+                    val windDeg = windObject.optDouble("deg", Double.NaN)
 
-            binding.tvWeatherTelop.text = "都市名 : $cityName"
-            binding.weatherMain.text = "天気 : $weatherDescription"
-            binding.mainTemp.text = "気温 : $weatherTemp ℃ | 体感温度 : $weatherFeelsLike ℃"
-            binding.windSpeed.text = "風速 : $windSpeed hpa"
+                    // 1日目の表示するところ
+                    binding.tvWeatherTelop.text = "${if (formattedDate.isNotEmpty()) formattedDate else "N/A"}"
+                    binding.WeatherTitle.text = getString(R.string.tv_title, timeOnly)
+                    binding.tvWeatherTelop.text = getString(R.string.tv_telop, cityName)
+                    binding.weatherMain.text = "天気 : ${if (weatherDescription.isNotEmpty()) weatherDescription else "N/A"}"
+                    binding.mainTemp.text = "気温 : ${if (mainDesc != Int.MIN_VALUE) mainDesc else "N/A"} ℃ | 体感気温 : ${if (mainFeels != Int.MIN_VALUE) mainFeels else "N/A"} ℃"
+                    binding.mainHumidity.text = "湿度 : ${if (mainhumidity != Int.MIN_VALUE) mainhumidity else "N/A"} % | 気圧 : ${if (maingrndlevel != Int.MIN_VALUE) maingrndlevel else "N/A"} PA"
+                    binding.windSpeed.text = "風速 : ${if (!windSpeed.isNaN()) windSpeed else "N/A"} m/s | 風向 : ${if (!windDeg.isNaN()) windDeg else "N/A"} kt"
+                }
+            }
 
-
-//            val listArray = root.getJSONArray("list")
-//            val current2 = listArray.getJSONObject(1)
-//            val listDescription = current2.getString("description")
-
-
-
-
-
-
-        } catch (e: Exception) {
+        } catch (e: JSONException) {
             Log.e(DEBUG_TAG, "Error parsing weather information", e)
         }
     }
@@ -97,6 +116,8 @@ class NextMainActivity : AppCompatActivity() {
                 urlConnection.readTimeout = 30000
 
                 val result = urlConnection.inputStream.bufferedReader().use { it.readText() }
+                Log.d(DEBUG_TAG, "API Response: $result")  // レスポンスをログに出力
+
                 urlConnection.disconnect()
 
                 result
