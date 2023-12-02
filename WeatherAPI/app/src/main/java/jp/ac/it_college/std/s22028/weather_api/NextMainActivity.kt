@@ -51,10 +51,13 @@ class NextMainActivity : AppCompatActivity() {
             val city = root.getJSONObject("city")
             val cityName = city.getString("name")
 
+
             val listArray = root.getJSONArray("list")
             if (listArray.length() > 0) {
                 // １日目のはじめ
                 val firstWeatherObject = listArray.getJSONObject(0)
+
+                val pop = firstWeatherObject.getString("pop")
 
                 // Main{}のやつ
                 val mainObject = firstWeatherObject.getJSONObject("main")
@@ -67,7 +70,8 @@ class NextMainActivity : AppCompatActivity() {
                     val date = inputFormat.parse(dateOnly)
                     outputFormat.format(date!!)
                 }.getOrElse { dateOnly }
-                val timeOnly = dtObject.split(" ")[1].substring(0, 2).toInt()
+                val dayOnly = dtObject.split(" ")[1].substring(0, 2).toInt()
+
 
                 val mainTemp = mainObject.optDouble("temp", Double.NaN)
                 val mainDesc = (mainTemp - 273.15).toInt()
@@ -75,6 +79,7 @@ class NextMainActivity : AppCompatActivity() {
                 val mainFeels = (mainfeelsLike - 273.15).toInt()
                 val mainhumidity = mainObject.optInt("humidity", Int.MIN_VALUE)
                 val maingrndlevel = mainObject.optInt("grnd_level", Int.MIN_VALUE)
+
 
                 val weatherArray = firstWeatherObject.getJSONArray("weather")
                 if (weatherArray.length() > 0) {
@@ -85,15 +90,22 @@ class NextMainActivity : AppCompatActivity() {
                     val windObject = firstWeatherObject.getJSONObject("wind")
                     val windSpeed = windObject.optDouble("speed", Double.NaN)
                     val windDeg = windObject.optDouble("deg", Double.NaN)
+                    val windGust = windObject.optDouble("gust", Double.NaN)
+
 
                     // 1日目の表示するところ
-                    binding.tvWeatherTelop.text = "${if (formattedDate.isNotEmpty()) formattedDate else "N/A"}"
-                    binding.WeatherTitle.text = getString(R.string.tv_title, timeOnly)
+                    binding.tvWeatherTelop.text = "${if (dayOnly != Int.MIN_VALUE) dayOnly else "N/A"}"
+                    binding.tvTitle2.text = "${if (formattedDate.isNotEmpty()) formattedDate else "N/A"}"
+                    binding.WeatherTitle.text = getString(R.string.tv_title, dayOnly)
                     binding.tvWeatherTelop.text = getString(R.string.tv_telop, cityName)
                     binding.weatherMain.text = "天気 : ${if (weatherDescription.isNotEmpty()) weatherDescription else "N/A"}"
                     binding.mainTemp.text = "気温 : ${if (mainDesc != Int.MIN_VALUE) mainDesc else "N/A"} ℃ | 体感気温 : ${if (mainFeels != Int.MIN_VALUE) mainFeels else "N/A"} ℃"
                     binding.mainHumidity.text = "湿度 : ${if (mainhumidity != Int.MIN_VALUE) mainhumidity else "N/A"} % | 気圧 : ${if (maingrndlevel != Int.MIN_VALUE) maingrndlevel else "N/A"} PA"
-                    binding.windSpeed.text = "風速 : ${if (!windSpeed.isNaN()) windSpeed else "N/A"} m/s | 風向 : ${if (!windDeg.isNaN()) windDeg else "N/A"} kt"
+                    binding.windSpeed.text = "風速 : ${if (!windSpeed.isNaN()) windSpeed else "N/A"} m/s | 瞬間風速 : ${if (!windGust.isNaN()) windGust else "N/A"} m/s"
+                    binding.windDeg.text = "風向 : ${if (!windDeg.isNaN()) windDeg else "N/A"} kt"
+                    binding.POP.text = "降水確率 : ${if (mainDesc != Int.MIN_VALUE) pop else "N/A"} %"
+
+                    binding.tvD.text = getString(R.string.tv_d, dtObject)
                 }
             }
 

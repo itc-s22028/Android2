@@ -9,13 +9,15 @@
     <string name="tv_wind_speed">風速は%1$sです。</string>
     <string name="tv_wind_deg">風向は%1$sです。</string>
     <string name="tv_wind_gust">瞬間風速は%1$sです。</string>
-    <string name="tv_pop">直近3時間の積雪量は%1$sです。</string>
+<!--    <string name="tv_pop">直近3時間の積雪量は%1$sです。</string>-->
     <string name="tv_d">予測時刻は%1$sです。</string>
+    <string name="tv_pop">降水確率 : %1$s</string>
 
     <string name="tv_select"> 都市名を選択したください。</string>
     <string name="tv_winfo_title">お天気詳細</string>
     <string name="tv_desc">現在は%1$sです。</string>
     <string name="tv_title">%1$s時の天気</string>
+    <string name="tv_title2">天気</string>
     <string name="tv_telop">%1$1s</string>
 
 
