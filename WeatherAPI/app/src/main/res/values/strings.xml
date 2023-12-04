@@ -20,6 +20,8 @@
     <string name="tv_title2">天気</string>
     <string name="tv_telop">%1$1s</string>
 
+    <string name="loop_stop">終了</string>
+
 
     <string-array name="spinner_items">
         <item>北海道(札幌)</item>
