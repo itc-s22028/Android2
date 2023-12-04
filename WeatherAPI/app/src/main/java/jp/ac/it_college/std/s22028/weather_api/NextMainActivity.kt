@@ -87,7 +87,7 @@ class NextMainActivity : AppCompatActivity() {
                         // dtObjectと現在時刻を比較
                         val currentDateTime = LocalDateTime.now()
                         val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
-                        val formattedDateTime = currentDateTime.format(formatter)
+//                        val formattedDateTime = currentDateTime.format(formatter)
                         val dtObjectDateTime = LocalDateTime.parse(dtObject, formatter)
 
                         if (dtObjectDateTime.isAfter(currentDateTime)) {
